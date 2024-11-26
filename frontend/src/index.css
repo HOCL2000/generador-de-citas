@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+
+.custom-text-shadow-pink{
+    text-shadow: 0 0 10px #ff7cb7, 0 0 25px #F7EEF2;
+}
+
+.custom-text-shadow-blue{
+    text-shadow: 0 0 10px #967cff, 0 0 25px #f0eef7;
+}
+
+.custom-text-shadow-red{
+    text-shadow: 0 0 10px #ff7c7c, 0 0 25px #f7eeee;
+}
+
+.custom-text-shadow-white{
+    text-shadow: 0 0 10px #838383, 0 0 25px #fff;
+}
+
+.rbc-month-view {
+    z-index: 0;
+}
+
+.hide-scrollbar {
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  
+}
+
+.mascara{
+    mask-image: linear-gradient(to left, black 50%, transparent 90%);
+}
+
+.rbc-disabled-day{
+    cursor: not-allowed;
+    pointer-events:none;
+    color: #ececec;
+}
+
+.rbc-aviable-day{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #e0ffe4;
+    transition: background-color .5s ease;
+}
+
+
+.rbc-button-link{
+    pointer-events: none;
+}
+
+
+
+.rbc-has-event-day{
+    background-color: #e5f6e7;
+    width: 95%;
+}
+
+.header-animado{
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0px;
+    animation: adjust-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+}
+
+@keyframes adjust-header {
+    to{
+        background: rgba(0,0,0,.1);
+    }
+}
+
+@layer base {
+  :root {
+        --radius: 0.5rem;
+    }
+}
+
